@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Android 12+ Native Splash Screen Theme.
+      To implement, add this to your AndroidManifest.xml's <application> or launcher <activity> tag:
+      android:theme="@style/Theme.App.Starting"
+    -->
+
+    <!--
+    File: res/drawable/ic_splash_logo.xml
+    (Please create this file in your Android project's `res/drawable` folder)
+
+    <vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="108dp"
+        android:height="108dp"
+        android:viewportWidth="108"
+        android:viewportHeight="108">
+      <path
+          android:fillColor="#FFFFFFFF"
+          android:pathData="M40,78 L54,48 L68,78 M64,70 L44,70"
+          android:strokeWidth="4"
+          android:strokeColor="#FFFFFF"
+          android:strokeLineCap="round" />
+    </vector>
+    -->
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- The background of the splash screen. -->
+        <item name="windowSplashScreenBackground">#09090b</item>
+        
+        <!-- The icon to display on the splash screen. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+
+        <!-- A background color to display behind the icon. -->
+        <item name="windowSplashScreenIconBackgroundColor">#18181b</item>
+        
+        <!-- The theme to use once the splash screen is dismissed. -->
+        <item name="postSplashScreenTheme">@style/Theme.ARControlLiveStudio</item>
+    </style>
+
+    <!-- Placeholder for your main App Theme -->
+    <style name="Theme.ARControlLiveStudio" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Main theme attributes -->
+    </style>
+
+</resources>

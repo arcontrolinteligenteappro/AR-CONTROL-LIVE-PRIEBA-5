@@ -1,0 +1,8 @@
+{
+  "name": "AR CONTROL LIVE",
+  "description": "Professional Web-based Broadcast Switcher & Production Console. Offline-first, Touch-first, AI-integrated.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AR CONTROL LIVE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              broadcast: {
+                bg: '#09090b', // Zinc 950
+                panel: '#18181b', // Zinc 900
+                surface: '#27272a', // Zinc 800
+                pgm: '#dc2626',
+                pvw: '#16a34a',
+                accent: '#3b82f6',
+                text: '#e4e4e7',
+                muted: '#71717a',
+                danger: '#ef4444',
+                warning: '#f59e0b',
+                success: '#10b981'
+              }
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+              sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Hide scrollbar for touch-like feel */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Prevent text selection for touch controls */
+      .touch-action-none {
+        touch-action: none;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      /* Range Slider Styling */
+      input[type=range] {
+        -webkit-appearance: none; 
+        background: transparent; 
+      }
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.18.2",
+    "lucide-react": "https://esm.sh/lucide-react@0.475.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-broadcast-bg text-broadcast-text overflow-hidden touch-action-none h-screen w-screen selection:bg-broadcast-accent selection:text-white">
+    <div id="root" class="h-full w-full"></div>
+  </body>
+</html>
